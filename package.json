@@ -1,6 +1,6 @@
 {
   "name": "enchanted-promises",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Package that makes the modern features of the promises available, even with the oldest javascript",
   "main": "build/index.js",
   "repository": {
