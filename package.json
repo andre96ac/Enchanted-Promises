@@ -1,0 +1,16 @@
+{
+  "name": "enchanted-promises",
+  "version": "0.0.1",
+  "description": "Package that makes the modern features of the promises available, even with the oldest javascript",
+  "main": "build/index.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "Andrea Cuppini",
+  "license": "ISC"
+}
