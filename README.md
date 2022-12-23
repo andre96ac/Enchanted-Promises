@@ -5,6 +5,7 @@
   - [Description:](#description)
   - [Usage:](#usage)
     - [- AllSettled](#--allsettled)
+    - [- sequantiallyExecution](#--sequantiallyexecution)
 
 <br>
 <br>
@@ -53,4 +54,30 @@ Enchanted Promises is a package, constantly updated, which makes the modern feat
     .catch(err => {
         //never happens
     })
+```
+
+
+
+
+### - sequantiallyExecution
+
+
+```typescript
+ // Simple async function
+ function delayAndWrite(seconds: number, text: string){
+    return new Promise<void>((resolve, _) => {
+        setTimeout(() => {console.log(text); resolve()}, seconds * 1000);
+    })
+}
+
+
+const arPromises = [delayAndWrite, delayAndWrite, delayAndWrite];
+const arParams = [[7, 'pippo'], [1, 'mario'], [1, 'gervasio']];
+
+
+
+sequentiallyExecution(arPromises, arParams, false)
+                                           .then(() => console.log('All done!'))
+                                           .catch((err) => {console.log('ERROR! ', err)});
+
 ```
